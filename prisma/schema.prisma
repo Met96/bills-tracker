@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Bill {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Bill information
+  billType      String   // "energy" or "gas"
+  cost          Float
+  period        String   // e.g., "2024-01" or "January 2024"
+  consumption   Float    // kW for energy, m³ for gas
+  unit          String   // "kW" or "m³"
+
+  // Status
+  confirmed     Boolean  @default(false)
+
+  // Additional info
+  notes         String?
+  billFileName  String?
+  billData      Bytes?
+
+  // Year reference for efficient querying
+  year          Int
+  month         Int?
+
+  @@index([billType])
+  @@index([year])
+  @@index([confirmed])
+}
+
+model YearlyStats {
+  id                  String   @id @default(cuid())
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  year                Int      @unique
+
+  // Energy stats (kW)
+  energyTotalCost     Float    @default(0)
+  energyTotalConsumed Float    @default(0)
+  energyBillCount     Int      @default(0)
+
+  // Gas stats (m³)
+  gasTotalCost        Float    @default(0)
+  gasTotalConsumed    Float    @default(0)
+  gasBillCount        Int      @default(0)
+
+  // Combined
+  combinedTotalCost   Float    @default(0)
+}
