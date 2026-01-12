@@ -87,7 +87,7 @@ onMounted(() => {
       <!-- Stats Grid -->
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <!-- Total Cost Card -->
-        <div class="rounded-lg shadow p-6 bg-linear-to-br from-blue-50 to-blue-100">
+        <div class="rounded-lg p-6 bg-linear-to-br from-blue-50 to-blue-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.totalCost') }}</p>
@@ -100,7 +100,7 @@ onMounted(() => {
         </div>
 
         <!-- Energy Stats Card -->
-        <div class="rounded-lg shadow p-6 0 bg-linear-to-br from-yellow-50 to-yellow-100">
+        <div class="rounded-lg p-6 0 bg-linear-to-br from-yellow-50 to-yellow-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.energyCost') }}</p>
@@ -116,7 +116,7 @@ onMounted(() => {
         </div>
 
         <!-- Gas Stats Card -->
-        <div class="rounded-lg shadow p-6  bg-linear-to-br from-orange-50 to-orange-100">
+        <div class="rounded-lg p-6  bg-linear-to-br from-orange-50 to-orange-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.gasCost') }}</p>
@@ -132,7 +132,7 @@ onMounted(() => {
         </div>
 
         <!-- Bills Count Card -->
-        <div class="rounded-lg shadow p-6 bg-linear-to-br from-green-50 to-green-100">
+        <div class="rounded-lg p-6 bg-linear-to-br from-green-50 to-green-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.billsCount') }}</p>
@@ -153,14 +153,14 @@ onMounted(() => {
         <div class="flex flex-col sm:flex-row gap-4">
           <NuxtLink
             to="/upload"
-            class="flex-1 bg-linear-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors duration-300 flex items-center gap-2 justify-center shadow-lg"
+            class="flex-1 bg-linear-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors duration-300 flex items-center gap-2 justify-center"
           >
             <UIcon name="i-lucide-plus" class="size-5" />
             {{ $t('dashboard.uploadNewBill') }}
           </NuxtLink>
           <NuxtLink
             to="/bills"
-            class="flex-1 bg-linear-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors duration-300 flex items-center gap-2 justify-center shadow-lg"
+            class="flex-1 bg-linear-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors duration-300 flex items-center gap-2 justify-center"
           >
             <UIcon name="i-lucide-list-checks" class="size-5" />
             {{ $t('dashboard.viewAllBills') }}
@@ -172,24 +172,24 @@ onMounted(() => {
       <!-- Breakdown Section -->
       <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Energy Details -->
-        <div class="bg-white rounded-lg shadow p-6">
+        <div class="bg-white rounded-lg p-6">
           <h2 class="text-lg font-bold text-gray-900 mb-4">
             <div class="text-yellow-500 text-3xl"><UIcon name="i-lucide-zap" /></div>
             {{ $t('dashboard.energyBreakdown') }}</h2>
           <div class="space-y-3">
-            <div class="flex justify-between items-center pb-3 border-b border-b-gray-300">
+            <div class="flex justify-between items-center p-3 rounded-lg bg-[#f5faff]">
               <span class="text-gray-600">{{ $t('dashboard.totalCost') }}</span>
               <span class="font-semibold">€{{ stats.energyTotalCost.toFixed(2) }}</span>
             </div>
-            <div class="flex justify-between items-center pb-3 border-b border-b-gray-300">
+            <div class="flex justify-between items-center p-3">
               <span class="text-gray-600">{{ $t('dashboard.totalConsumption') }}</span>
               <span class="font-semibold">{{ stats.energyTotalConsumed.toFixed(1) }} kW</span>
             </div>
-            <div class="flex justify-between items-center pb-3 border-b border-b-gray-300">
+            <div class="flex justify-between items-center p-3 rounded-lg bg-[#f5faff]">
               <span class="text-gray-600">{{ $t('dashboard.billsCount') }}</span>
               <span class="font-semibold">{{ stats.energyBillCount }}</span>
             </div>
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center p-3">
               <span class="text-gray-600">{{ $t('dashboard.averagePerBill') }}</span>
               <span class="font-semibold">
                 {{
@@ -204,24 +204,24 @@ onMounted(() => {
         </div>
 
         <!-- Gas Details -->
-        <div class="bg-white rounded-lg shadow p-6">
+        <div class="bg-white rounded-lg p-6">
           <h2 class="text-lg font-bold text-gray-900 mb-4">
             <div class="text-orange-500 text-3xl"><UIcon name="i-lucide-flame" /></div>
             {{ $t('dashboard.gasBreakdown') }}</h2>
           <div class="space-y-3">
-            <div class="flex justify-between items-center pb-3 border-b border-b-gray-300">
+            <div class="flex justify-between items-center  p-3 rounded-lg bg-[#f5faff]">
               <span class="text-gray-600">{{ $t('dashboard.totalCost') }}</span>
               <span class="font-semibold">€{{ stats.gasTotalCost.toFixed(2) }}</span>
             </div>
-            <div class="flex justify-between items-center pb-3 border-b border-b-gray-300">
+            <div class="flex justify-between items-center p-3">
               <span class="text-gray-600">{{ $t('dashboard.totalConsumption') }}</span>
               <span class="font-semibold">{{ stats.gasTotalConsumed.toFixed(1) }} m³</span>
             </div>
-            <div class="flex justify-between items-center pb-3 border-b border-b-gray-300">
+            <div class="flex justify-between items-center p-3 rounded-lg bg-[#f5faff]">
               <span class="text-gray-600">{{ $t('dashboard.billsCount') }}</span>
               <span class="font-semibold">{{ stats.gasBillCount }}</span>
             </div>
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center p-3">
               <span class="text-gray-600">{{ $t('dashboard.averagePerBill') }}</span>
               <span class="font-semibold">
                 {{
