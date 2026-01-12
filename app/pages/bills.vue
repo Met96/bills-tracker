@@ -103,7 +103,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class=" bg-gray-50 p-6">
+  <div class="p-6">
     <div class="max-w-6xl mx-auto">
       <!-- Header -->
       <div class="mb-8">
@@ -175,7 +175,7 @@ onMounted(() => {
         <p class="text-gray-600 mt-4">{{ $t('bills.noBillsFound') }}</p>
         <NuxtLink
           to="/upload"
-          class="inline-block mt-6 px-6 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition"
+          class="inline-block mt-6 px-6 py-2 bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white rounded-lg transition shadow-lg"
         >
           {{ $t('bills.uploadFirstBill') }}
         </NuxtLink>

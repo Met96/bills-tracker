@@ -53,7 +53,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-gray-50 p-6">
+  <div class="p-6">
     <div class="max-w-6xl mx-auto">
       <!-- Header -->
       <div class="mb-8">
@@ -87,7 +87,7 @@ onMounted(() => {
       <!-- Stats Grid -->
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <!-- Total Cost Card -->
-        <div class="bg-white rounded-lg shadow p-6 border-l-4 border-blue-800">
+        <div class="rounded-lg shadow p-6 bg-linear-to-br from-blue-50 to-blue-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.totalCost') }}</p>
@@ -100,7 +100,7 @@ onMounted(() => {
         </div>
 
         <!-- Energy Stats Card -->
-        <div class="bg-white rounded-lg shadow p-6 border-l-4 border-yellow-500">
+        <div class="rounded-lg shadow p-6 0 bg-linear-to-br from-yellow-50 to-yellow-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.energyCost') }}</p>
@@ -116,7 +116,7 @@ onMounted(() => {
         </div>
 
         <!-- Gas Stats Card -->
-        <div class="bg-white rounded-lg shadow p-6 border-l-4 border-orange-500">
+        <div class="rounded-lg shadow p-6  bg-linear-to-br from-orange-50 to-orange-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.gasCost') }}</p>
@@ -132,7 +132,7 @@ onMounted(() => {
         </div>
 
         <!-- Bills Count Card -->
-        <div class="bg-white rounded-lg shadow p-6 border-l-4 border-green-600">
+        <div class="rounded-lg shadow p-6 bg-linear-to-br from-green-50 to-green-100">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-gray-600 text-sm font-medium">{{ $t('dashboard.billsCount') }}</p>
@@ -153,15 +153,14 @@ onMounted(() => {
         <div class="flex flex-col sm:flex-row gap-4">
           <NuxtLink
             to="/upload"
-            class="flex-1 bg-blue-800 hover:bg-blue-900 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors flex items-center gap-2 justify-center"
+            class="flex-1 bg-linear-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-medium py-3 px-6 rounded-lg text-center transition-all flex items-center gap-2 justify-center shadow-lg"
           >
-
             <UIcon name="i-lucide-plus" class="size-5" />
             {{ $t('dashboard.uploadNewBill') }}
           </NuxtLink>
           <NuxtLink
             to="/bills"
-            class="flex-1 bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors flex items-center gap-2 justify-center"
+            class="flex-1 bg-linear-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-medium py-3 px-6 rounded-lg text-center transition-all flex items-center gap-2 justify-center shadow-lg"
           >
             <UIcon name="i-lucide-list-checks" class="size-5" />
             {{ $t('dashboard.viewAllBills') }}

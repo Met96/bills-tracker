@@ -2,10 +2,10 @@
   <div class="relative flex flex-wrap gap-2 text-sm">
     <button
       v-for="year in availableYears" :key="year"
-      class="py-2 px-4 rounded-md cursor-pointer"
+      class="py-2 px-4 rounded-md font-medium transition-all cursor-pointer"
       :class="[
-        { 'text-white bg-blue-800 hover:bg-blue-900': selectedYear === year},
-        { 'text-gray-500 bg-gray-300 hover:text-white hover:bg-blue-900': selectedYear !== year}]"
+        { 'text-white bg-linear-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 shadow-lg': selectedYear === year},
+        { 'text-gray-500 bg-gray-200 hover:bg-gray-300 opacity-60': selectedYear !== year}]"
       @click="() => $emit('change', year)"
       >
       {{ year }}

@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="bg-[#f5faff]">
     <NuxtRouteAnnouncer />
       <NuxtLayout>
         <NuxtPage />

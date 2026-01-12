@@ -199,7 +199,7 @@ const resetForm = () => {
 </script>
 
 <template>
-  <div class="bg-gray-50 p-6">
+  <div class="p-6">
     <div class="max-w-6xl mx-auto">
       <!-- Header -->
       <div class="mb-8">
@@ -225,7 +225,7 @@ const resetForm = () => {
           </div>
           <p class="text-xl font-semibold text-gray-900 mb-2">{{ $t('upload.dragAndDrop') }}</p>
           <p class="text-gray-600 mb-4">{{ $t('upload.or') }}</p>
-          <label class="px-6 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-900 transition cursor-pointer inline-block">
+          <label class="px-6 py-2 bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white rounded-lg transition cursor-pointer inline-block shadow-lg">
             {{ $t('upload.selectFile') }}
             <input
               type="file"
@@ -378,7 +378,7 @@ const resetForm = () => {
           <div class="flex gap-4 pt-6">
             <button
               type="button"
-              class="flex-1 px-6 py-3 bg-gray-200 text-gray-900 rounded-lg hover:bg-gray-300 cursor-pointer transition font-medium"
+              class="flex-1 px-6 py-3 bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white rounded-lg transition font-medium cursor-pointer shadow-lg"
               @click="resetForm"
             >
               {{ $t('upload.uploadAnother') }}
@@ -386,7 +386,7 @@ const resetForm = () => {
             <button
               type="submit"
               :disabled="confirming"
-              class="flex-1 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              class="flex-1 px-6 py-3 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-lg transition font-medium cursor-pointer shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {{ confirming ? $t('upload.saving') : `✓ ${$t('upload.confirmAndSave')}` }}
             </button>
@@ -402,12 +402,12 @@ const resetForm = () => {
         <div class="flex gap-4 justify-center">
           <NuxtLink
             to="/"
-            class="px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition font-medium cursor-pointer"
+            class="px-6 py-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white rounded-lg transition font-medium cursor-pointer shadow-lg"
           >
             {{ $t('upload.backToDashboard') }}
           </NuxtLink>
           <button
-            class="px-6 py-2 bg-white border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition font-medium cursor-pointer"
+            class="px-6 py-2 bg-gradient-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white rounded-lg transition font-medium cursor-pointer shadow-lg"
             @click="resetForm"
           >
             {{ $t('upload.uploadAnotherBill') }}
