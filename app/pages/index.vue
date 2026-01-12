@@ -153,14 +153,14 @@ onMounted(() => {
         <div class="flex flex-col sm:flex-row gap-4">
           <NuxtLink
             to="/upload"
-            class="flex-1 bg-linear-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-medium py-3 px-6 rounded-lg text-center transition-all flex items-center gap-2 justify-center shadow-lg"
+            class="flex-1 bg-linear-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors duration-300 flex items-center gap-2 justify-center shadow-lg"
           >
             <UIcon name="i-lucide-plus" class="size-5" />
             {{ $t('dashboard.uploadNewBill') }}
           </NuxtLink>
           <NuxtLink
             to="/bills"
-            class="flex-1 bg-linear-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-medium py-3 px-6 rounded-lg text-center transition-all flex items-center gap-2 justify-center shadow-lg"
+            class="flex-1 bg-linear-to-r from-gray-500 to-gray-700 hover:from-gray-600 hover:to-gray-800 text-white font-medium py-3 px-6 rounded-lg text-center transition-colors duration-300 flex items-center gap-2 justify-center shadow-lg"
           >
             <UIcon name="i-lucide-list-checks" class="size-5" />
             {{ $t('dashboard.viewAllBills') }}

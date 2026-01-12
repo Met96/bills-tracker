@@ -175,7 +175,7 @@ onMounted(() => {
         <p class="text-gray-600 mt-4">{{ $t('bills.noBillsFound') }}</p>
         <NuxtLink
           to="/upload"
-          class="inline-block mt-6 px-6 py-2 bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white rounded-lg transition shadow-lg"
+          class="inline-block mt-6 px-6 py-2 bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 text-white rounded-lg transition-colors duration-300 shadow-lg"
         >
           {{ $t('bills.uploadFirstBill') }}
         </NuxtLink>

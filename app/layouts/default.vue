@@ -20,7 +20,7 @@ const isDrawerOpen = ref(false)
             </NuxtLink>
             <NuxtLink
               to="/upload"
-              class="py-1.5 px-3 rounded-md text-xs text-white bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 font-medium transition flex items-center gap-1.5 shadow-md"
+              class="py-1.5 px-3 rounded-md text-xs text-white bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 font-medium transition-colors duration-300 flex items-center gap-1.5 shadow-md"
               active-class="text-blue-600"
             >
               <UIcon name="i-lucide-plus" class="size-4" />
@@ -57,7 +57,7 @@ const isDrawerOpen = ref(false)
           </NuxtLink>
           <NuxtLink
             to="/upload"
-            class="py-2 px-4 rounded-md text-white bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 font-medium transition flex items-center gap-2 shadow-lg"
+            class="py-2 px-4 rounded-md text-white bg-gradient-to-r from-blue-700 to-blue-900 hover:from-blue-800 hover:to-blue-950 font-medium transition-colors duration-300 flex items-center gap-2 shadow-lg"
             active-class="text-blue-600"
           >
             <UIcon name="i-lucide-plus" class="size-5" />
